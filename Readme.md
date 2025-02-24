@@ -1,10 +1,9 @@
-Winstars AI DS Internship Test
-=====================================
+# Winstars AI DS Internship Test
 
-Overview
+## Overview
 This project evaluates skills in Data Science, Machine Learning, Computer Vision, and Natural Language Processing (NLP). It consists of two main tasks:
 
-Image Classification + OOP
+## Image Classification + OOP
 
 Utilize the MNIST dataset to build three classification models:
 
@@ -18,7 +17,7 @@ Implement each model as a separate class adhering to the MnistClassifierInterfac
 
 Provide a wrapper class MnistClassifier for a unified interface
 
-Named Entity Recognition + Image Classification
+## Named Entity Recognition + Image Classification
 
 Create a pipeline that:
 
@@ -28,7 +27,7 @@ Classifies animal images
 
 Verifies if the text description matches the image content
 
-Project Structure
+### Project Structure
 text
 project/
 ├── task1/
@@ -44,49 +43,60 @@ project/
 │   └── requirements.txt
 ├── images/  # Folder for test images
 └── README.md
-Setup and Running
-Task 1: MNIST Classification
+___Setup and Running_
+### Task 1: MNIST Classification
 Install dependencies:
-
-bash
+~~~ bash
 pip install -r task1/requirements.txt
+~~~
 Use the models:
 
-python
+~~~python
 from mnist_classifier import MnistClassifier
 
 classifier = MnistClassifier(algorithm='cnn')
 classifier.train(X_train, y_train)
 predictions = classifier.predict(X_test)
-Task 2: Animal Verification Pipeline
+~~~
+### Task 2: Animal Verification Pipeline
 Install dependencies:
 
-bash
+~~~bash
 pip install -r task2/requirements.txt
+~~~
 Train models:
 
-bash
+~~~bash
 python task2/train_ner.py --dataset <ner_dataset_path>
 python task2/train_image_classifier.py --dataset <image_dataset_path>
+~~~
 Test the pipeline:
 
-python
+~~~python
 from pipeline import AnimalVerificationPipeline
 
 pipeline = AnimalVerificationPipeline()
 result = pipeline.verify("This is a cat.", "images/cat.jpg")
 print(f"Verification result: {result}")
-Testing
-Use images in the images/ folder for testing.
+~~~
+#### Testing
+Use images in the images/ folder for testing
 
-Verify text-image pairs using the pipeline.
+Verify text-image pairs using the pipeline
 
-Requirements
+#### Requirements
 Python 3.8+
 
-See requirements.txt in each task folder for specific libraries.
+See requirements.txt in each task folder for specific libraries
 
-Notes
-Ensure MNIST dataset is available for Task 1.
+#### Notes
+Ensure MNIST dataset is available for Task 1
 
-Prepare a dataset with at least 10 animal classes for Task 2's image classifier.  
+Prepare a dataset with at least 10 animal classes for Task 2's image classifier
+
+##### English Additional Resources
+MNIST Dataset: You can download the MNIST dataset directly from TensorFlow or Keras.
+
+NER Dataset: For NER, you can use existing datasets like spaCy's English models, but you may need to adapt them for recognizing animal names.
+
+Animal Image Dataset: For animal image classification, collect or use existing datasets such as the Stanford Dogs Dataset or similar ones.
