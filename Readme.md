@@ -89,4 +89,4 @@ See requirements.txt in each task folder for specific libraries.
 Notes
 Ensure MNIST dataset is available for Task 1.
 
-Prepare a dataset with at least 10 animal classes for Task 2's image classifier.
+Prepare a dataset with at least 10 animal classes for Task 2's image classifier.  
